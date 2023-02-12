@@ -1,6 +1,11 @@
+import Message from '../layout/Message'
+
 function Projects() {
     return (
-    <h1>Projects</h1>
+    <div>
+        <h1>Meus Projetos</h1>
+        <Message msg="Alguma mensagem" />
+    </div>
     )
 }
 
