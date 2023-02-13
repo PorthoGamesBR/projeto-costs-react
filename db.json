@@ -39,6 +39,17 @@
       "cost": 0,
       "services": [],
       "id": 4
+    },
+    {
+      "name": "Costs - React.Js",
+      "budget": "0",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
     }
   ],
   "categories": [
