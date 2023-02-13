@@ -33,6 +33,7 @@ function Project() {
     },[id])
 
     function editPost(project){
+        setMessage('')
         // Budget Validation
         if(project.budget < project.cost){
             // mensagem
