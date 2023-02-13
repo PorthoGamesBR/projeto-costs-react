@@ -1,3 +1,5 @@
+import { parse, v4 as uuidv4 } from 'uuid'
+
 import styles from "./Project.module.css"
 
 import {useParams} from 'react-router-dom'
@@ -61,6 +63,45 @@ function Project() {
         })
         .catch((err) => console.log(err))
     }
+    
+    function createService(project){
+        setMessage('')
+
+        // Last Service
+        const lastService = project.services[project.services.length - 1]
+
+        lastService.id = uuidv4()
+
+        const lastServiceCost = lastService.cost
+
+        const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
+
+        // maximum value validation
+        if(newCost > parseFloat(project.budget)) {
+            setMessage('Orçamento ultrapassado, verifique o valor do serviço')
+            setType('error')
+            project.services.pop()
+            return false
+        }
+
+        // Add service cost to project cost
+        project.cost = newCost
+
+        // update project
+        fetch(`http://localhost:5000/projects/${project.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(project)
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => console.log(err))
+
+    }
 
     function toggleProjectForm(){
         setShowProjectForm(!showProjectForm)
@@ -107,7 +148,10 @@ function Project() {
                         </button>
                         <div className={styles.project_info}>
                             {showServiceForm && (
-                            <ServiceForm />
+                            <ServiceForm 
+                            handleSubmit={createService}
+                            btnText="Adicionar Serviço"
+                            projectData={project}/>
                             )}
                         </div>         
                     </div>

@@ -18,8 +18,39 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 620,
+      "services": [
+        {
+          "name": "Teste Sucesso Serviçp",
+          "cost": "200",
+          "description": "É pra funcionar",
+          "id": "0d9b26a0-e54d-42a7-9ff6-a250a18bfc36"
+        },
+        {
+          "name": "Teste Sucesso Serviçp",
+          "cost": "200",
+          "description": "É pra funcionar",
+          "id": "0d9b26a0-e54d-42a7-9ff6-a250a18bfc36"
+        },
+        {
+          "name": "Adsdsads",
+          "cost": "100",
+          "description": "Nope nope",
+          "id": "0eab9c0c-eb4b-45c3-a884-09f60c75862d"
+        },
+        {
+          "name": "Adsdsads",
+          "cost": "100",
+          "description": "Nope nope",
+          "id": "0eab9c0c-eb4b-45c3-a884-09f60c75862d"
+        },
+        {
+          "name": "pimba",
+          "cost": "20",
+          "description": "pimba",
+          "id": "67ddf27b-1557-468e-8176-e72c107efde0"
+        }
+      ],
       "id": 3
     },
     {
