@@ -1,4 +1,4 @@
-import styles from "Contact.module.css"
+import styles from "./Contact.module.css"
 import Container from "../layout/Container"
 
 function Contact() {
@@ -7,15 +7,21 @@ function Contact() {
     <div className={styles.contact_container}>
         <div className={styles.title_container}>
             <h1>Contato</h1>
-            <p>Fale conosco</p>
+            <p>Entre em contato diretamente conosco!</p>
         </div>
         <Container customClass="start">
-            // barra de icones de redes sociais
-
             <div>
+                {
                 // formulario de contato
+                }
             </div>
+            
         </Container>
+        <div>
+                {
+                    // imagem apontando para as redes sociais abaixo
+                }
+        </div>
     </div>
     )
 }
