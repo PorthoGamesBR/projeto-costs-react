@@ -1,6 +1,8 @@
 import styles from "./Contact.module.css"
 import Container from "../layout/Container"
 
+import ContactForm from "../contact/ContactForm"
+
 function Contact() {
     return (
     
@@ -9,15 +11,16 @@ function Contact() {
             <h1>Contato</h1>
             <p>Entre em contato diretamente conosco!</p>
         </div>
-        <Container customClass="start">
-            <div>
+        <Container customClass="column">
+            <div className={styles.contact_form}>
                 {
-                // formulario de contato
+                <ContactForm />
                 }
             </div>
             
         </Container>
         <div>
+            <p>Por uma de nossas redes sociais</p>
                 {
                     // imagem apontando para as redes sociais abaixo
                 }
